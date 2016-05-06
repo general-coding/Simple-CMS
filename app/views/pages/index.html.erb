@@ -1,14 +1,9 @@
 <html>
 	<body>
-		<% if !flash[:notice].blank? %>
-			<div class="notice">
-				<%= flash[:notice] %>
-			</div>
-		<% end %>
+		<%= link_to("Add New Page", {:action => 'new'}, :class => 'action new') %>
+
 		<div class="pages index">
 			<h2>Pages</h2>
-			
-			<%= link_to("Add New Page", {:action => 'new'}, :class => 'action new') %>
 			
 			<table class="listing" summary="Page list">
 				<tr class="header">
