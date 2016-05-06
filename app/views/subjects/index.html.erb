@@ -1,5 +1,10 @@
 <html>
 	<body>
+		<% if !flash[:notice].blank? %>
+			<div class="notice">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
 		<div class="subjects index">
 			<h2>Subjects</h2>
 			
@@ -21,8 +26,8 @@
 					<td class="center"><%= subject.pages.size %></td>
 					<td class="actions">
 						<%= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action show') %>
-						<%= link_to("Edit", '#', :class => 'action edit') %>
-						<%= link_to("Delete", '#', :class => 'action delete') %>
+						<%= link_to("Edit", {:action => 'edit', :id => subject.id}, :class => 'action edit') %>
+						<%= link_to("Delete", {:action => 'delete', :id => subject.id}, :class => 'action delete') %>
 					</td>
 				</tr>
 				<%end%>

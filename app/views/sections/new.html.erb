@@ -3,10 +3,14 @@
 		<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 		
 		<div class="subjects new">
-			<h2>Create Subject</h2>
+			<h2>Create Section</h2>
 			
-			<%= form_for(:subject, :url => {:action => 'create'}) do |f| %>
-				<table summary="Subject form fields">
+			<%= form_for(:section, :url => {:action => 'create'}) do |f| %>
+				<table summary="Section form fields">
+					<tr>
+						<th>Page ID</th>
+						<td><%= f.text_field(:page_id) %></td>
+					</tr>
 					<tr>
 						<th>Name</th>
 						<td><%= f.text_field(:name) %></td>
@@ -19,10 +23,18 @@
 						<th>Visible?</th>
 						<td><%= f.text_field(:visible) %></td>
 					</tr>
+					<tr>
+						<th>Content Type</th>
+						<td><%= f.text_field(:content_type) %></td>
+					</tr>
+					<tr>
+						<th>Content</th>
+						<td><%= f.text_field(:content) %></td>
+					</tr>
 				</table>
 				
 				<div class="form-buttons">
-					<%= submit_tag("Create Subject") %>
+					<%= submit_tag("Create Section") %>
 				</div>
 			<% end %>
 		</div>
