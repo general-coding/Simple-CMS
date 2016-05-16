@@ -155,14 +155,15 @@ span.status.false{
 }
 
 /* Errors */
-.fieldWithErrors {	
+.field_with_errors {	
 }
 
-.fieldWithErrors label {
+.field_with_errors label {
 	color: #AA0000;
 }
 
-.fieldWithErrors input {
+.field_with_errors input {
+	border: 1px solitd, #AA0000;
 }
 
 #errorExplanation {
