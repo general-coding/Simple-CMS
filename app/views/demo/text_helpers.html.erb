@@ -1,4 +1,5 @@
-<% text = "This is some long sample text. It includes line breaks\n and double-line breaks.\n\n It rambles on and on and on.\n\n Until we get to this last line."
+<%
+text = "This is some long sample text. It includes line breaks\n and double-line breaks.\n\n It rambles on and on and on.\n\n Until we get to this last line."
 %>
 
 <h2>word_wrap</h2>
@@ -24,23 +25,24 @@
 <h2>highlight</h2>
 <%= highlight(text, 'sample text') %>
 <hr />
-<%= highlight(text, ['sample', 'rambles'], :highlighter => '<em>\1</em>') %>
+<%= highlight(text, ['sample', 'rambles'],
+:highlighter => '<em>\1</em>') %>
 <hr />
 
 <h2>pluralize</h2>
 <%= "student".pluralize %><br />
 <%= "ox".pluralize %><br />
 <br />
-<%= pluralize(2, 'product') %>
+<%= pluralize(2, 'product') %><br />
 <br />
 <% [0, 1, 20].each do |n| %>
-	<%= pluralize(n, 'product') %><br />
-	<%= pluralize(n, 'octopus') %><br />
-	<%= pluralize(n, 'snipe', 'snope') %><br />
+  <%= pluralize(n, 'product') %><br />
+  <%= pluralize(n, 'octopus') %><br />
+  <%= pluralize(n, 'snipe', 'snope') %><br />
 <% end %>
 <hr />
 
 <h2>cycle</h2>
 <% 5.times do %>
-	<%= cycle('red', 'green', 'blue') %><br />
+  <%= cycle('red', 'green', 'blue') %><br />
 <% end %>

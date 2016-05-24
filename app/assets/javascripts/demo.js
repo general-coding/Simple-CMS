@@ -2,5 +2,5 @@
 // All this logic will automatically be available in application.js.
 
 function jsRoar(name) {
-	alert('I am ' + name + '. Hear me roar!');
+  alert('I am ' + name + '. Hear me roar!');
 }

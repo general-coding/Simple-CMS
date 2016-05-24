@@ -7,22 +7,19 @@
 <% target = "world" %>
 <%= "Hello #{target}" %>
 
-<% 3.times do %>
-	<%= "xxx" %>
+<% @array.each do |n| %>
+  <%= n %><br />
 <% end %>
 
-<% @array.each do |n|%>
-	<%= n %><br />
-<% end %>
+<br />
 
 <a href="/demo/index">Index page 1</a><br />
-<%= link_to('Index page 2', {:action => 'index'}) %> <br />
+<%= link_to('Index page 2', {:action => 'index'}) %>
 
+<br />
 ID: <%= params[:id] %><br />
 ID: <%= @id %><br />
-Page: <%= params[:page] %><br />
-Page: <%= @page %><br />
-Next Page: <%= @page.to_i + 1 %><br />
+Next Page: <%= @page + 1 %><br />
 
 <hr />
 <%= params.inspect %>
